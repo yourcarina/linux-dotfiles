@@ -1,0 +1,42 @@
+// 多媒体自定义组
+{
+    "group/player": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": ["custom/cava","mpris"],
+        "spacing": 8
+    },
+
+
+// 多媒体  
+    "mpris": {
+        "format": "正在播放: {title} - {artist}",
+        "format-paused": "已暂停: {title} - {artist}",
+        "format-stopped": "⏹ 无播放进程",
+        "player-icons": {
+            "default": "🎵"
+        },
+        "status-icons": {
+            "paused": "▶",
+            "stopped": "⏹",
+            "playing": "⏸"
+        },
+        "tooltip": "{player}: {title}\n艺术家: {artist}\n专辑: {album}\n时长: {length}",
+        "interval": 1,
+        "enable-tooltip-len-limits": true,
+        "tooltip-len-limit": 100,
+        "ignore-players": ["chrome", "chromium","firefox"],
+        "fallback-icon": "🎶"
+    },
+    
+    
+    
+ // 音频可视化
+    "custom/cava": {
+        "tooltip": false,
+        "format": "{}",
+        "exec": "waybar-cava"
+    },
+}

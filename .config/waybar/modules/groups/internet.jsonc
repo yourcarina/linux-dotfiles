@@ -1,0 +1,49 @@
+// 网络+蓝牙组合模块
+{
+
+
+
+    "group/internet": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": ["network", "bluetooth"],
+        "spacing": 8
+    },
+    
+
+
+// 网络
+    "network": {
+        "format-disconnected": "{icon}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "{icon}",
+        "format-icons": {
+            "disconnected": "󰤮",
+            "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+            "ethernet": "󰈀"
+        },
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname} : {ipaddr}",
+        "tooltip-format-ethernet": "{ifname} : {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty -e iwctl",
+    },
+
+
+
+// 蓝牙
+    "bluetooth": {
+        "format-disabled": "󰂲",
+        "tooltip-format-disabled": "左键：启用蓝牙",
+        "format": "󰂯",
+        "tooltip-format-on": "左键：禁用蓝牙\n右键：启动 GUI",
+        "format-connected": "󰂱",
+        "tooltip-format-connected": "󰂱 {device_alias} 右键：启动 GUI",
+        "on-click": "waybar-bluetooth",
+        "on-click-right": "blueberry"
+    }
+    
+    
+    
+}

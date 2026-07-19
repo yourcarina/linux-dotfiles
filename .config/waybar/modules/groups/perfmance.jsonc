@@ -1,0 +1,54 @@
+// 性能监控模块组
+{
+    "group/perfmance": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "cpu",
+            "memory",
+            "disk"
+        ],
+        "spacing": 8
+    },
+    
+    
+    
+// cpu 占用情况
+    "cpu": {
+        "interval": 60,
+        "format": " {usage}%",
+        "tooltip": true,
+        "warning": 75,
+        "critical": 90,
+        "on-click": "kitty -e 'btop'"
+    },
+    
+    
+    
+// 内存 / RAM 占用情况
+    "memory": {
+        "interval": 60,
+        "format": " {used:0.1f}GiB",
+        "max-length": 8,
+        "tooltip": true,
+        "warning": 75,
+        "critical": 90
+    },
+    
+    
+    
+// 存储占用分析模块
+    "disk": {
+        "interval": 60,
+        "format": " {percentage_used:2}%",
+        "path": "/",
+        "warning": 75,
+        "critical": 90,
+        "unit": "GiB"
+    }
+
+
+
+}

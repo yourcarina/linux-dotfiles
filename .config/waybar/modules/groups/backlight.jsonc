@@ -1,0 +1,100 @@
+// 背光调节组合模块
+{
+
+
+
+    "group/backlight": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "group/ddcutil",
+            "backlight",
+            "backlight/slider",
+            "custom/separator"
+        ],
+        "spacing": 8
+    },
+
+
+
+// 内屏亮度主模块
+    "backlight": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+
+
+// 内屏亮度调节滑块
+    "backlight/slider": {
+        "min": 5,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+
+
+// 模块间分隔符
+    "custom/separator": {
+//        "format": "󱋱",
+        "format": "|",
+        "tooltip": false
+    },
+    
+
+
+// ddcutil 独立子组
+     "group/ddcutil": {
+         "orientation": "inherit", // 横向排列（与外层组一致）
+         "drawer": {
+            "transition-left-to-right": false
+        },
+         "spacing": 8, // 子组内模块间距（可按需调整）
+         "modules": [
+             "custom/day",
+             "custom/sleep",
+             "custom/night"
+         ],
+         "spacing": 8
+     },
+     
+     
+     
+// 外接显示器 日间模式
+    "custom/day": {
+        "tooltip-format": "外接显示器 100%",
+        "format": "󰃠",
+        "on-click": "ddcutil --display 1 setvcp 10 100 ",
+        "on-scroll-up": "true",
+        "on-scroll-down": "true"
+    },
+
+
+
+// 外接显示器 夜间模式
+    "custom/night": {
+        "tooltip-format": "外接显示器 60%",
+        "format": "󰃟",
+        "on-click": "ddcutil --display 1 setvcp 10 60 ",
+        "on-scroll-up": "true",
+        "on-scroll-down": "true"
+    },
+
+
+
+// 外接显示器 睡眠模式
+    "custom/sleep": {
+        "tooltip-format": "外接显示器 10%",
+        "format": "󰃞",
+        "on-click": "ddcutil --display 1 setvcp 10 10 ",
+        "on-scroll-up": "true",
+        "on-scroll-down": "true"
+    }
+
+    
+    
+    
+}

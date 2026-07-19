@@ -1,0 +1,58 @@
+// 电源菜单组合模块
+{
+
+
+
+    "group/powermenu": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/wlogout",
+            "custom/reboot",
+            "custom/logout",
+            "custom/lockscreen"
+        ],
+        "spacing": 8
+    },
+    
+
+
+// 电源菜单-总入口（启动wlogout界面）
+    "custom/wlogout": {
+        "tooltip": false,
+        "format": "󰐥",
+        "on-click": "wlogout"
+    },
+    
+    
+
+// 电源菜单-锁屏功能
+    "custom/lockscreen": {
+        "tooltip": false,
+        "format": "",
+        "on-click": "hyprlock"
+    },
+
+
+
+// 电源菜单-退出登录功能
+    "custom/logout": {
+        "format": "󰈆",
+        "on-click": "systemctl logout",
+        "tooltip": false
+    },
+
+
+
+// 电源菜单-重启功能
+    "custom/reboot": {
+        "tooltip": false,
+        "format": "",
+        "on-click": "systemctl reboot"
+    }
+    
+    
+    
+}

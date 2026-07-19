@@ -1,0 +1,107 @@
+// 后台模块组
+{
+
+
+
+    "group/backyard": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": ["tray", "privacy","custom/updates","custom/dunst"],
+        "spacing": 8
+    },
+    
+// 隐私相关模块（屏幕共享/摄像头/麦克风监控）
+    "privacy": {
+        "icon-spacing": 10,
+        "icon-size": 16,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24,
+                "format-icons": {
+                    "active": "🖥️<span foreground='red'><sup>●</sup></span>",
+                    "inactive": "🖥️"
+                },
+                "on-click": "swaymsg 'exec grimblast copy area'",
+                "on-click-right": "pkill -f screenshare",
+                "exec-if": "which hyprctl"
+            },
+            {
+                "type": "microphone",
+                "tooltip": true,
+                "tooltip-icon-size": 24,
+                "format-icons": {
+                    "active": "🎤<span foreground='red'><sup>●</sup></span>",
+                    "inactive": "🎤",
+                    "muted": "🔇"
+                },
+                "on-click": "pulsemixer",
+                "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+                "exec-if": "which pactl"
+            },
+            {
+                "type": "camera",
+                "tooltip": true,
+                "tooltip-icon-size": 24,
+                "format-icons": {
+                    "active": "📷<span foreground='red'><sup>●</sup></span>",
+                    "inactive": "📷"
+                },
+                "on-click": "cheese",
+                "on-click-right": "pkill -f cheese",
+                "exec-if": "which v4l2-ctl"
+            }
+        ]
+    },
+    
+    
+    
+// 正在运行的软件
+    "tray": {
+        "icon-size": 24,
+        "spacing": 8
+    },
+
+
+
+// Arch 系统更新
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "",
+            "updated": ""
+        },
+        "show-empty": false,
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --no-zero-output",
+        "on-click": "kitty -e yay"
+    },
+    
+    
+
+// Dunst 通知管理
+    "custom/dunst": {
+        "tooltip": false,
+        "format": "{icon}",
+        "return-type": "json",
+        "format-icons": {
+            "active": "<span foreground='red'><sup></sup></span>",
+            "inactive": "",
+            "paused": ""
+        },
+        "exec-if": "which dunstctl",
+        "exec": "dunstctl status --json | jq -c '{icon: if .paused then \"paused\" elif .count > 0 then \"active\" else \"inactive\" end}'",
+        "on-click": "dunstctl show",
+        "on-click-right": "dunstctl close-all",
+        "on-click-middle": "dunstctl set-paused toggle",
+        "escape": true
+    }
+    
+    
+    
+}
