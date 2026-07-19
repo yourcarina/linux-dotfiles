@@ -1,0 +1,46 @@
+// 音频控制组
+{
+    "group/audio": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "pulseaudio",
+            "pulseaudio/slider"
+        ],
+        "spacing": 8
+    },
+    // 音频配置
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-bluetooth": "{volume}%",
+        "format-bluetooth-muted": " {format_source}",
+        "tooltip-format": "左键：静音扩音器\n右键：静音麦克风\n中键：Pavucontrol",
+        "format-icons": {
+            "bluetooth": "",
+            "speaker": ["", "", ""],
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": "🎧",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", " ", " "]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol --tab=3",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"
+    },
+    // 音频音量调节滑块
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    }
+}
