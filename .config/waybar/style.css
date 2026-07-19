@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: JetBrainsMono NF;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+
+
+window#waybar {
+    background-color: transparent;
+}
+
+
+
+#workspaces {
+/*    background: rgba(49, 50, 68, 0.8); */
+    background: transparent;
+    border-radius: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+/*    border: 1px solid rgba(88, 91, 112, 0.3); */
+}
+
+
+
+#workspaces button {
+    background: transparent;
+    color: #6c7086;
+    padding: 0px 8px;
+    margin: 0px;
+    transition: all 0.3s ease;
+}
+
+
+
+#window label {
+    font-size: 0.8em;
+    color: #808080;
+}
+
+
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
+
+
+#workspaces button.active {
+    color: #b4befe;
+}
+
+
+
+#workspaces button:hover {
+    color: #cdd6f4;
+}
+
+
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+
+
+tooltip {
+    background: rgba(30, 32, 48, 0.2);
+    border: 1px solid rgba(88, 91, 112, 0.1);
+    border-radius: 24px;
+    color: #cdd6f4;
+}
+
+
+
+tooltip label {
+    color: #FFFFFF;
+    padding: 0px 4px;
+}
+
+
+
+/* 模块通用样式 */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    /* background: rgba(255, 255, 255, 0.1); */
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    border: 1px solid rgba(88, 91, 112, 0.3);
+}
+
+
+
+.module {
+    margin: 0px 0px;
+    padding: 0px 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+
+
+.module:hover {
+    color: #97CBFF;
+    font-size: 1.2em;
+}
+
+
+
+.module.muted {
+    color: #6c7086;
+}
+
+
+
+.module.warning {
+    color: #f9e2af;
+}
+
+
+
+.module.critical {
+    color: #f38ba8;
+}
+
+
+
+.module.charging {
+    color: #a6da95;
+}
+
+
+
+.module.activated {
+    color: #b4befe;
+}
+
+
+
+.module.disconnected {
+    color: #6c7086;
+}
+
+
+
+.module.connected {
+    color: #a6da95;
+}
+
+
+
+.module.disabled {
+    color: #6c7086;
+}
+
+
+.module slider {
+    min-height: 0;
+    min-width: 0;
+    opacity: 0; /* 隐藏原生滑块按钮 */
+    border-radius: 16px;
+}
+
+/* 滑块背景槽（未填充部分） */
+.module trough {
+    min-height: 12px; /* 槽高度 */
+    min-width: 128px; /* 槽宽度 */
+    border-radius: 16px; /* 槽圆角（与高度匹配，呈胶囊状） */
+    background-color: #808080; /* 引用全局颜色变量（如背景色） */
+}
+
+/* 滑块填充高亮（已选择部分） */
+.module highlight {
+    min-width: 0;
+    border-radius: 16px; /* 与槽圆角一致，视觉统一 */
+    background-color: #FFFFFF; /* 引用全局高亮色变量 */
+}
+
+
+
+/* 模块自定义样式 */
+#battery {
+    color: #a6da95;
+}
+
+
+
+#custom-home {
+    color: #89b4fa;
+    font-size: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+/*    box-shadow: 0 2px 16px rgba(137, 80, 250, 0.6); */
+}
+
+
+
+#custom-home:hover {
+    font-size: 1.2em;
+}
+
+
+
+#power-profiles-daemon.performance {
+    color: #93000a;
+}
+
+
+
+#power-profiles-daemon.balanced {
+    color: #FFFFFF;
+}
+
+
+
+#power-profiles-daemon.power-saver {
+    color: #1aa052;
+}
+
+#custom-cava:hover {
+    color: #FFFFFF;
+}
+
+#custom-updates {
+    font-size: 0.8em;
+    padding: 0px 16px;
+}
+
+
+
+#custom-wfrec.recording {
+    color: #FF0000;
+}

@@ -1,0 +1,59 @@
+{
+
+
+
+    "include": [
+        "modules.jsonc"
+    ],
+    
+    
+    
+    "layer":"top",   // waybar 显示在最上方
+    "position": "top",
+    "fixed-center": true,
+    "reload_style_on_change": true,
+    "height": 48,
+    "margin-top": 2,
+    "margin-left": 2,
+    "margin-right": 2,
+    "margin-bottom": 6,
+    "spacing": 8,
+    
+    
+    
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    
+    
+    
+    
+    "modules-center": [
+        "group/perfmance",
+        "group/internet",
+        "custom/wfrec",
+        "custom/screenshot",
+        "idle_inhibitor",
+        "custom/colorpicker",
+        "power-profiles-daemon",
+        "custom/home",
+        "clock",
+        "group/player"
+    ],
+    
+    
+    
+    
+    "modules-right": [
+        "group/backyard",
+        "group/backlight",
+        "group/audio",
+        "battery",
+        "group/powermenu"
+        
+    ]
+    
+    
+    
+}

@@ -1,0 +1,21 @@
+{
+    "include": [
+        "./modules/hyprland-workspaces.jsonc",
+        "./modules/hyprland-window.jsonc",
+        "./modules/groups/perfmance.jsonc",
+        "./modules/groups/internet.jsonc",
+        "./modules/custom/wfrec.jsonc",
+        "./modules/custom/screenshot.jsonc",
+        "./modules/idle-inhibitor.jsonc",
+        "./modules/custom/colorpicker.jsonc",
+        "./modules/power-profiles-daemon.jsonc",
+        "./modules/custom/home.jsonc",
+        "./modules/clock.jsonc",
+        "./modules/groups/player.jsonc",
+        "./modules/groups/backyard.jsonc",
+        "./modules/groups/backlight.jsonc",
+        "./modules/groups/audio.jsonc",
+        "./modules/battery.jsonc",
+        "./modules/groups/powermenu.jsonc"
+    ]
+}
