@@ -1,0 +1,13 @@
+// 工作区配置
+{
+    "hyprland/workspaces": {
+        "sort-by-name": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰜋",
+            "occupied": "󰏃",
+            "default": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// 时钟
+{
+    "clock": {
+        "format": " {:%H:%M:%S %p}",
+        "format-alt": " {:%a,%b %d}",
+        "tooltip-format": "<big>{:%Y-%m-%d %H:%M}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "left",
+            "format": {
+                "month": "<b>{}</b>",
+                "today": "<span color='#FF0000'>{}</span>"
+            }
+        },
+        "interval": 1
+    }
+}

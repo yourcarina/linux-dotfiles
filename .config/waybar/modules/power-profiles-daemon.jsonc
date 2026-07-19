@@ -1,0 +1,13 @@
+// 左键循环切换性能模式
+{
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "模式：{profile}",
+        "tooltip": true,
+        "format-icons": {
+            "performance": "󱐋",
+            "balanced": "",
+            "power-saver": ""
+        }
+    }
+}

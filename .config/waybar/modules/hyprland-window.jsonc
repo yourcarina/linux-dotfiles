@@ -1,0 +1,12 @@
+// 窗口配置
+{
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 256,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) - bash": "> [$1]"
+        }
+    }
+}
