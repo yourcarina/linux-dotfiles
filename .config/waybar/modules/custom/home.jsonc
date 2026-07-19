@@ -1,0 +1,9 @@
+// logo+程序启动器
+{
+    "custom/home": {
+        "tooltip-format": "左键：应用中心\n右键：随机壁纸",
+        "format": "󰣇",
+        "on-click": "wofi show durn",
+        "on-click-right": "sys-wallpaper"
+    }
+}
