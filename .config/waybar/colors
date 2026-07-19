@@ -1,0 +1,21 @@
+/* wallust 颜色变量 */
+@define-color foreground #e5e1e9;
+@define-color background #141318;
+@define-color background-alt rgba(21,19,22,0.25);
+@define-color cursor #F9E3DF;
+@define-color color0 #141318;
+@define-color color1 #ffb4ab;
+@define-color color2 #302e41;
+@define-color color3 #928f99;
+@define-color color4 #c7bfff;
+@define-color color5 #ecb8ce;
+@define-color color6 #c8c3dc;
+@define-color color7 #3a383e;
+@define-color color8 #201f25;
+@define-color color9 #93000a;
+@define-color color10 #482537;
+@define-color color11 #e5dff9;
+@define-color color12 #613b4d;
+@define-color color13 #474459;
+@define-color color14 #2a292f;
+@define-color color15 #690005;
