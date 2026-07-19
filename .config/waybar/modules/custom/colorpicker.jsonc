@@ -1,0 +1,8 @@
+// 获取屏幕颜色 colorpicker
+{
+    "custom/colorpicker": {
+        "tooltip": false,
+        "format": "󱏜",
+        "on-click": "hyprpicker | wl-copy"
+    }
+}

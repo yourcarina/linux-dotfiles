@@ -1,0 +1,10 @@
+// 截图
+{
+    "custom/screenshot": {
+        "format": "",
+        "tooltip-format": "左键：全屏截图\n右键：区域截图\n中键：区域截图并编辑",
+        "on-click": "waybar-screenshot --full",
+        "on-click-right": "waybar-screenshot --area",
+        "on-click-middle": "waybar-screenshot --edit"
+    }
+}

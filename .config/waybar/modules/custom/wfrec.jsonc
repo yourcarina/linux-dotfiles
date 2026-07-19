@@ -1,0 +1,11 @@
+// wf-recorder 录屏设置
+{
+    "custom/wfrec": {
+        "exec": "waybar-recorder status-json",
+        "return-type": "json",
+        "signal": 9,
+        "tooltip": true,
+        "on-click": "waybar-recorder toggle",
+        "on-click-right": "waybar-recorder stop"
+    }
+}
