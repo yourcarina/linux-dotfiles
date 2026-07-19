@@ -1,0 +1,14 @@
+include=~/.config/mako/colors.conf
+border-size=1
+border-radius=8
+icon-border-radius=8
+icons=1
+anchor=top-right
+default-timeout=8000
+margin=16
+padding=16,0
+font=JetBrainsMono NF
+history=1
+max-visible=24
+max-history=128
+width=512
