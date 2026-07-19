@@ -1,0 +1,16 @@
+// 电池电量
+{
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 25
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}% ",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂂", "󰁹"],
+        "tooltip-format": "󰂍 {power} | {timeTo}"
+    }
+}
