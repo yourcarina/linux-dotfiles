@@ -1,0 +1,179 @@
+@import './colors.css';
+
+/* 全局窗口 */
+window {
+    font-size: 24pt;
+    font-weight: 400;
+
+    color: @foreground;
+
+    /* 半透明暗色遮罩 */
+    background-color: rgba(17, 17, 27, 0.8);
+}
+
+/* 按钮基础样式 */
+button {
+    color: #99D1DB;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 默认图标大小 */
+    background-size: 16%;
+
+    /* 半透明玻璃按钮 */
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+
+    margin: 16px;
+    padding: 24px;
+
+    /* 内部轻微发光 */
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.03),
+        0 8px 24px rgba(0,0,0,0.25);
+
+    /* 动画（稳定无抖动） */
+    transition:
+        background-size 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover 状态 */
+button:hover {
+    color: @color13;
+
+    background-color: rgba(255,255,255,0.10);
+
+    border-color: rgba(153, 209, 219, 0.55);
+
+    background-size: 24%;
+
+    box-shadow:
+        0 0 16px rgba(153, 209, 219, 0.25),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* Focus（键盘选中）*/
+button:focus {
+    color: white;
+
+    background-color: rgba(153, 209, 219, 0.14);
+
+    border-color: #99D1DB;
+
+    background-size: 24%;
+
+    box-shadow:
+        0 0 24px rgba(153, 209, 219, 0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* Active（点击瞬间）*/
+button:active {
+    background-size: 32%;
+}
+
+/* 文本 */
+button span {
+    font-size: 1.15em;
+}
+
+/* 图标（默认状态）*/
+#lock {
+    background-image: image(
+        url("icon/lock.svg"),
+        url("~/.config/wlogout/icon/lock.svg")
+    );
+}
+
+#logout {
+    background-image: image(
+        url("icon/logout.svg"),
+        url("~/.config/wlogout/icon/logout.svg")
+    );
+}
+
+#suspend {
+    background-image: image(
+        url("icon/suspend.svg"),
+        url("~/.config/wlogout/icon/suspend.svg")
+    );
+}
+
+#hibernate {
+    background-image: image(
+        url("icon/hibernate.svg"),
+        url("~/.config/wlogout/icon/hibernate.svg")
+    );
+}
+
+#shutdown {
+    background-image: image(
+        url("icon/shutdown.svg"),
+        url("~/.config/wlogout/icon/shutdown.svg")
+    );
+}
+
+#reboot {
+    background-image: image(
+        url("icon/reboot.svg"),
+        url("~/.config/wlogout/icon/reboot.svg")
+    );
+}
+
+/* Hover 图标切换 */
+#lock:hover {
+    background-image: image(
+        url("icon/hover/lock.svg"),
+        url("~/.config/wlogout/icon/hover/lock.svg")
+    );
+}
+
+#logout:hover {
+    background-image: image(
+        url("icon/hover/logout.svg"),
+        url("~/.config/wlogout/icon/hover/logout.svg")
+    );
+}
+
+#suspend:hover {
+    background-image: image(
+        url("icon/hover/suspend.svg"),
+        url("~/.config/wlogout/icon/hover/suspend.svg")
+    );
+}
+
+#hibernate:hover {
+    background-image: image(
+        url("icon/hover/hibernate.svg"),
+        url("~/.config/wlogout/icon/hover/hibernate.svg")
+    );
+}
+
+#shutdown:hover {
+    /* 红色警告风 */
+    color: #F38BA8;
+    border-color: #F38BA8;
+
+    background-image: image(
+        url("icon/hover/shutdown.svg"),
+        url("~/.config/wlogout/icon/hover/shutdown.svg")
+    );
+}
+
+#reboot:hover {
+    /* 橙色 */
+    color: #FAB387;
+    border-color: #FAB387;
+
+    background-image: image(
+        url("icon/hover/reboot.svg"),
+        url("~/.config/wlogout/icon/hover/reboot.svg")
+    );
+}

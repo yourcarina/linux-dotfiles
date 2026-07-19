@@ -1,0 +1,36 @@
+{
+    "label" : "logout",
+    "action" : "hyprctl dispatch exit 0",
+    "text" : "注销 / Logout"     
+}
+
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+    "text" : "锁屏 / Lock"
+}
+
+
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "关机 / Poweroff"
+}
+
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "重启 / Reboot"     
+}
+
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "挂起 / Suspend"    
+}
+
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "休眠 / Hibernate"
+}
